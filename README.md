@@ -4,10 +4,14 @@
 
 ## Overview
 
+For a device to be compatible with the balenaCloud platform, it needs to run balenaOS, our minimal Linux distribution built with Yocto and designed to run containers
+
+Balena supports a wide range of Linux SBCs and SOMs, but occasionally our list of supported devices will not include the device you would like to use with BalenaOS. In order to allow our customers to have the freedom to choose their own hardware, we offer our Custom Device Support service (CDS). 
+
 The outcome of CDS is a production-grade custom version of balenaOS built for your Linux device of choice, with ongoing support including test-and-release of upgraded OS versions.
 
-- For a device to be compatible with the balenaCloud platform, it needs to run balenaOS, our minimal Linux distribution built with Yocto and designed to run containers
-- Our device support team will build a custom version of balenaOS specifically for your device type, making sure we meet all of your hardware requirements. We will periodically build, test, and release upgrades to the OS as well.
+- Our device support team will build a custom version of balenaOS specifically for your device type, making sure we meet all of your hardware requirements. We will periodically build, test, and release upgrades to the device OS in order to keep it up to date with meta-balena
+
 - Your custom device type and its associated custom device OS will be available to download in the balenaCloud dashboard.
 
 ## Included with Custom Device Support
@@ -21,6 +25,19 @@ The outcome of CDS is a production-grade custom version of balenaOS built for yo
 
 **Note:** We use an automated testing rig to validate the OS releases. Once we have the patches for the board we will add your hardware to the testing rig in order to have the automated tests run with each PR. In the future, we intend to ship testing rigs to CDS customers for faster turn around time on new release testing. The tests balena runs are here: <https://github.com/balena-os/meta-balena/tree/master/tests/suites>; There are three categories of tests: cloud tests, OS tests, and host OS updates tests.
 
+## Step 1: Evaluation - Description of Work
+
+Evaluation of your custom hardware is the first step in Balena’s Custom Device Support process. It allows balena engineers to scope the work required to develop a balenaOS image on your behalf. After scoping is complete, balena will provide an official quote which includes the price tier for initial onboarding and ongoing maintenance (if desired) of that hardware onto balenaCloud, as described here: [https://www.balena.io/pricing/#custom-device-support](https://www.balena.io/pricing/#custom-device-support)
+
+In order to complete this work, Balena will require submission of the following form to ensure all relevant documentation and software components are shared with our engineers and scoping can begin as quickly as possible upon arrival of your hardware: [https://balena.typeform.com/to/OXJXXb](https://balena.typeform.com/to/OXJXXb)
+
+Additionally, please review the information below and, if you are not already including these details in the documentation you share with us via the above link, please share it with your Customer Success representative via email.
+
+## Step 2: Full Custom Device Support - Description of Work
+
+Balena will develop a production-grade, custom version of balenaOS, built specifically for a CDS customer's hardware. In addition to this initial onboarding effort, balena will be providing ongoing support, including updates to the custom device-type in the case of hardware changes, support for device-type specific questions in our Support queue, as well as test-and-release of upgraded balenaOS versions.
+
+
 ## Pricing
 
 We will evaluate and provide a quote for your specific board, depending on the effort and complexity required to support it. We will need you to send our team a board (and any peripherals) for the evaluation.
@@ -31,15 +48,35 @@ Note that after we evaluate your board, we will still need two more boards for o
 
 To learn more about pricing and ongoing costs, see the [CDS section on balena's pricing page](https://www.balena.io/pricing/#custom-device-support).
 
-## Misc Notes
+## FAQ:
 
+How do I know what pricing tier my board will be in?
+ The correct Tier pricing can only be confirmed once your device has gone through initial evaluation
+
+How long does the evaluation process take?
+It depends on the workload of the Balena Devices team, but a general guide is 2-4 weeks from the date the hardware is received. 
+
+I don’t want my device type to be visible to the balena community, can it be private to my org? 
+- If you require that your custom device is confidential/private to your team (i.e. not available for all users to download via the balenaCloud dashboard), talk to us about private device type options
+
+What happens if I make a major hardware revision?  
+- Additional hardware revisions that, for example, involve modifying the DTB, may be subject to additional charges to cover any relevant modification and testing.
+
+I have a custom LTE modem I want to use with my board, is that covered? 
 - Peripherals (e.g. modems) may require additional custom support and testing from the balena team, and may increase the cost of providing custom device support.
-- Additional hardware revisions may also require an increase in the cost.
-- If you require that your custom device is confidential / private to your team (i.e. not available for all users to download via the balenaCloud dashboard), talk to us about private device type options
-- Other custom device support options may be available; please let us know if you’d like to discuss tailor-made custom device support plans and packages
-- The correct Tier pricing can only be confirmed once your device has gone through initial evaluation
 
-## Requirements
+
+ -My hardware does not currently have Yocto support, can I still send it for evaluation?
+	- If a board does not have Yocto support, Balena will have to complete the necessary engineering work which is not covered under the evaluation phase. Any hardware that does not have Yocto support will sit in tier 3 as standard. 
+
+Will my custom device type be able to get Balena ESR releases?
+Yes, we are continuing to add more devices to our testing rig that will allow them to get ESR releases as well as the balena rolling release. 
+	
+
+
+
+
+## Device Requirements
 
 Minimum device specs:
 
@@ -96,17 +133,6 @@ More Information:
 
 **Note 2:** Due to our devices being routed to our hardware team in Romania, the shipping and customs review process can take several weeks. However, we will provide a tracking number for your reference once the pickup process has been completed.
 
-## Step 1: Evaluation - Description of Work
-
-Evaluation of your custom hardware is the first step in Balena’s Custom Device Support process. It allows balena engineers to scope the work required to develop a balenaOS image on your behalf. After scoping is complete, balena will provide an official quote which includes the price tier for initial onboarding and ongoing maintenance (if desired) of that hardware onto balenaCloud, as described here: [https://www.balena.io/pricing/#custom-device-support](https://www.balena.io/pricing/#custom-device-support)
-
-In order to complete this work, Balena will require submission of the following form to ensure all relevant documentation and software components are shared with our engineers and scoping can begin as quickly as possible upon arrival of your hardware: [https://balena.typeform.com/to/OXJXXb](https://balena.typeform.com/to/OXJXXb)
-
-Additionally, please review the information below and, if you are not already including these details in the documentation you share with us via the above link, please share it with your Customer Success representative via email.
-
-## Step 2: Full Custom Device Support - Description of Work
-
-Balena will develop a production-grade, custom version of balenaOS, built specifically for a CDS customer's hardware. In addition to this initial onboarding effort, balena will be providing ongoing support, including updates to the custom device-type in the case of hardware changes, support for device-type specific questions in our Support queue, as well as test-and-release of upgraded balenaOS versions.
 
 ## Maintainership Agreement: Terms and Conditions
 
@@ -125,3 +151,4 @@ Future contact with balena can be made in the following ways:
 If balena reaches out to the customer for questions about upcoming OS releases which require the customer's input, and balena does not receive response from the customer within 6 months, balena reserves the right to remove this device-type from our dashboard and halt all actions related to its maintenance, or to make it a publicly available Device Type.
 
 After discontinuance of support for this hardware by the manufacturer, or end of support for the Yocto version required by this hardware, balena commits to keeping the device-type on the platform for up to two years, but with no further updates outside of critical security fixes if possible.
+
