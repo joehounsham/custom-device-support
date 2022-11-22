@@ -4,9 +4,9 @@
 
 ## Overview
 
-For a device to be compatible with the balenaCloud platform, it needs to run balenaOS, our minimal Linux distribution built with Yocto and designed to run containers
+For a device to be compatible with the balenaCloud platform, it needs to run balenaOS, our minimal Linux distribution built with Yocto and designed to run containers.
 
-Balena supports a wide range of Linux SBCs and SOMs, but occasionally our list of supported devices will not include the device you would like to use with BalenaOS. In order to allow our customers to have the freedom to choose their own hardware, we offer our Custom Device Support service (CDS). 
+Balena supports a wide range of Linux SBCs and SOMs, but occasionally our list of supported devices will not include the device you would like to use. In order to allow our customers to have the freedom to use their preffered hardware with Balena, we offer our Custom Device Support service (CDS). 
 
 The outcome of CDS is a production-grade custom version of balenaOS built for your Linux device of choice, with ongoing support including test-and-release of upgraded OS versions.
 
